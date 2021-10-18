@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="./bar.css">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bar Chart-Graph It</title>
+</head>
+<body>
+    <div class="container">
+        <div class="section-one">
+            <form action="#">
+                <input type="text" id="one">
+                <input type="number" id="two">
+                <input type="button" onclick="alter()" value="Add" id="add">
+                <input type="button" onclick="change()" value="Edit" id="edit">
+                <input type="button" onclick="deleteIt()" value="Delete" id="del">
+            </form>
+            <canvas id="graph"></canvas>
+        </div>
+    </div>
+</body>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+    <script src="./bar.js"></script>
+</html>

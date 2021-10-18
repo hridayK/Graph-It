@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 2vh;
+    width: 100vw;
+}
+
+.section-one{
+    display: inline;
+}
+
+#graph{
+    width: 60vw;
+    height: auto;
+    border: 2px solid gray;
+}
