@@ -10,13 +10,28 @@
 <body>
     <div class="container">
         <div class="section-one">
-            <form action="#">
+                <br>
+                <label for="one">X-Axis:</label>
+                <br>
+                <br>
                 <input type="text" id="one">
+                <br>
+                <br>
+                <label for="two">Y-Axis:</label>
+                <br>
+                <br>
                 <input type="number" id="two">
-                <input type="button" onclick="alter()" value="Add" id="add">
-                <input type="button" onclick="change()" value="Edit" id="edit">
-                <input type="button" onclick="deleteIt()" value="Delete" id="del">
-            </form>
+                <br>
+                <br>
+                <div class="dom-buttons">
+                    <input type="button" onclick="alter()" value="Add" id="add">
+                    <input type="button" onclick="change()" value="Edit" id="edit">
+                    <input type="button" onclick="deleteIt()" value="Delete" id="del">
+                </div>
+                <br>
+                <a href="#" id="dld" onclick="getImg()" download="graphImage">download</a>
+        </div>
+        <div class="section-two">
             <canvas id="graph"></canvas>
         </div>
     </div>

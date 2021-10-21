@@ -1,6 +1,7 @@
-let x,y;
+let x,y,dwn;
 x = document.getElementById("one");
 y = document.getElementById("two");
+dwn = document.getElementById("dld");
 
 var e_index,count=1;
 var add,edit,del;
@@ -21,7 +22,8 @@ function addState(){
 }
 
 //BAR CHART START
-var ctx = document.getElementById("graph").getContext("2d");
+var canvasElement = document.getElementById("graph");
+var ctx = canvasElement.getContext("2d");
 var chart = new Chart(ctx, {
     type: 'bar',
     data: {
@@ -119,4 +121,10 @@ function deleteIt(){
     chart.data.labels.splice(e_index,1);
     chart.data.datasets[0].data.splice(e_index,1);
     chart.update();
+    addState();
+}
+
+function getImg(){
+  let url = canvasElement.toDataURL("img/jpeg",1.0);
+  dwn.href = url;
 }

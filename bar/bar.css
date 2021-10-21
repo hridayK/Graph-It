@@ -4,14 +4,16 @@
 }
 .container{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     margin: auto;
     margin-top: 2vh;
     width: 100vw;
 }
 
-.section-one{
-    display: inline;
+.dom-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 #graph{
