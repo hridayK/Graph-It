@@ -3,6 +3,7 @@ x = document.getElementById("one");
 y = document.getElementById("two");
 dwn = document.getElementById("dld");
 
+
 var e_index,count=1;
 var add,edit,del;
 add = document.getElementById("add");
@@ -24,12 +25,13 @@ function addState(){
 //BAR CHART START
 var canvasElement = document.getElementById("graph");
 var ctx = canvasElement.getContext("2d");
+
 var chart = new Chart(ctx, {
     type: 'bar',
     data: {
         labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
         datasets: [{
-            label: 'Graph Title',
+            label: '',
             data: [12, 19, 3, 5, 2, 3],
             backgroundColor: [
                 'rgba(255, 99, 132, 1)',
@@ -57,6 +59,10 @@ var chart = new Chart(ctx, {
               beginAtZero: true
             }
           }]
+        },plugins:{
+          legend:{
+          display:false
+          }
         },
         onClick(e) {
           try{const activePoints = chart.getElementsAtEventForMode(e, 'nearest', {
@@ -88,22 +94,30 @@ var chart = new Chart(ctx, {
             count++;
           }
         }
-      }
+      },plugins:[{
+        id: 'custom_canvas_background_color',
+        beforeDraw: (chart) => {
+          const ctx = chart.canvas.getContext('2d');
+          ctx.save();
+          ctx.globalCompositeOperation = 'destination-over';
+          ctx.fillStyle = 'white';
+          ctx.fillRect(0, 0, chart.width, chart.height);
+          ctx.restore();
+        }
+      }]
 });
 //BAR CHART END
 
 //FUCTIONS
 
 function alter(){
-    if(count%2==0){
-      if(x.value!="" && (y.value!=null && y.value!=0)){
-        chart.data.labels.push(x.value);
-        chart.data.datasets[0].data.push(y.value);
-        chart.update();
-        x.value="";
-        y.value=null;
-      }
-    }
+  if(x.value!="" && (y.value!=null && y.value!=0)){
+    chart.data.labels.push(x.value);
+    chart.data.datasets[0].data.push(y.value);
+    chart.update();
+    x.value="";
+    y.value=null;
+  }
 }
 
 function change(){

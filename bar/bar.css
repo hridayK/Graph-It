@@ -1,13 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display&display=swap');
+
 *{
     margin: 0;
     padding: 0;
 }
+
+#graph{
+    background-color: white;
+}
+
 .container{
     display: flex;
     justify-content: space-evenly;
     margin: auto;
     margin-top: 2vh;
     width: 100vw;
+    height: auto;
 }
 
 .dom-buttons{
@@ -20,4 +28,17 @@
     width: 60vw;
     height: auto;
     border: 2px solid gray;
+}
+
+@media only screen and (max-width:800px) {
+
+    .container{
+        display: flex;
+        justify-content: space-evenly;
+        margin: auto;
+        flex-direction: column;
+        margin-top: 2vh;
+        width: 100vw;
+        height: auto;
+    }
 }
