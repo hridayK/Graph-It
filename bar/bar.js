@@ -79,6 +79,8 @@ var chart = new Chart(ctx, {
               count++;
             }
           }catch(err){
+            x.value="";
+            y.value=null;
             add.style.display="block"
             del.style.display="none"
             edit.style.display="none"
@@ -102,7 +104,6 @@ var chart = new Chart(ctx, {
 //BAR CHART END
 
 //FUCTIONS
-
 function alter(){
   if(x.value!="" && (y.value!=null && y.value!=0)){
     chart.data.labels.push(x.value);

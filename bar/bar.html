@@ -8,34 +8,38 @@
     <title>Bar Chart-Graph It</title>
 </head>
 <body>
-    <h1>Graph-It</h1>
+    <div class="titlePart">
+        <h1>Graph-It</h1>
+    </div>
     <br>
     <div class="container">
         <div class="section-one">
                 <br>
-                <label for="one">X-Axis:</label>
+                <label class="labels" for="one">X-Axis:</label>
                 <br>
                 <br>
-                <input type="text" id="one">
+                <input class="graph-inputs" type="text" id="one">
                 <br>
                 <br>
-                <label for="two">Y-Axis:</label>
+                <label class="labels" for="two">Y-Axis:</label>
                 <br>
                 <br>
-                <input type="number" id="two">
+                <input class="graph-inputs" type="number" id="two">
                 <br>
                 <br>
                 <div class="dom-buttons">
-                    <input type="button" onclick="alter()" value="Add" id="add">
-                    <input type="button" onclick="change()" value="Edit" id="edit">
-                    <input type="button" onclick="deleteIt()" value="Delete" id="del">
+                    <input class="buttons" type="button" onclick="alter()" value="ADD" id="add">
+                    <input class="buttons" type="button" onclick="change()" value="EDIT" id="edit">
+                    <input class="buttons" type="button" onclick="deleteIt()" value="DELETE" id="del">
                 </div>
                 <br>
-                <a href="#" id="dld" onclick="getImg()" download="graphImage">download</a>
         </div>
         <div class="section-two">
             <canvas id="graph"></canvas>
         </div>
+    </div>
+    <div class="dwn-btn">
+        <a href="#" id="dld" onclick="getImg()" download="graphImage">Download Graph</a>
     </div>
 </body>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
