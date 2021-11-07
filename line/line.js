@@ -29,10 +29,10 @@ var ctx = canvasElement.getContext("2d");
 var chart = new Chart(ctx, {
     type: 'line',
     data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+    labels: [/*'Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'*/],
         datasets: [{
             label: '',
-            data: [12, 19, 3, 5, 2, 3],
+            data: [/*12, 19, 3, 5, 2, 3*/],
             /*backgroundColor: [
                 'rgba(255, 99, 132, 1)',
                 'rgba(54, 162, 235, 1)',

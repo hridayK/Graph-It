@@ -29,10 +29,10 @@ var ctx = canvasElement.getContext("2d");
 var chart = new Chart(ctx, {
     type: 'pie',
     data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        labels: [],
         datasets: [{
             label: '',
-            data: [12, 19, 3, 5, 2, 3],
+            data: [],
             backgroundColor: [
                 'rgba(255, 99, 132, 1)',
                 'rgba(54, 162, 235, 1)',
