@@ -16,7 +16,7 @@ edit.style.display = "none";
 
 // ADD STATE
 function addState(){
-  add.style.display="block"
+  add.style.display="block";
   del.style.display="none";
   edit.style.display="none";
   e_index=null;
@@ -64,16 +64,16 @@ var chart = new Chart(ctx, {
             index
           }] = activePoints;
             if(count%2==0){
-              add.style.display="block"
-              del.style.display="none"
-              edit.style.display="none"
+              add.style.display="block";
+              del.style.display="none";
+              edit.style.display="none";
               e_index=null;
               count++;
             }else{
               e_index=index;
-              add.style.display="none"
-              edit.style.display="block"
-              del.style.display="block"
+              add.style.display="none";
+              edit.style.display="block";
+              del.style.display="block";
               x.value = chart.data.labels[index];
               y.value = chart.data.datasets[0].data[index];
               count++;
@@ -81,9 +81,9 @@ var chart = new Chart(ctx, {
           }catch(err){
             x.value="";
             y.value=null;
-            add.style.display="block"
-            del.style.display="none"
-            edit.style.display="none"
+            add.style.display="block";
+            del.style.display="none";
+            edit.style.display="none";
             e_index=null;
             if(count%2==0)
               count++;
