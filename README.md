@@ -1,5 +1,5 @@
 # Graph-It
-## A project made at IETE-TSEC
+## A project made at IETE-TSEC, [click here](https://hridayk.github.io/Graph-It/) to view the deployed app
 ![image](https://user-images.githubusercontent.com/16136188/162870800-09e230e1-a743-4f48-b7a8-efc262e8b979.png)
 <br />
 # Sample of a Downloaded Graph:
